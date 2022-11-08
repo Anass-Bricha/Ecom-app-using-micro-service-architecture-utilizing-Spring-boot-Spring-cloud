@@ -1,0 +1,4 @@
+gateway :
+  params :
+    p1 : 1000
+    p2 : 1100
