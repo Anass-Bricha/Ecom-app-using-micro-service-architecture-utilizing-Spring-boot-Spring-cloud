@@ -1,0 +1,4 @@
+customer :
+  params :
+    x : 88888
+    y : 111111
