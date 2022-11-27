@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: CONFIG-SERVICE
+
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Anass-Bricha/Ecom-app-using-micro-service-architecture-utilizing-Spring-boot-Spring-cloud.git
+          default-label: config-repo
