@@ -12,4 +12,6 @@ public interface OrderServices {
     List<ProductItemResponseDto> getProductItems(Long orderId);
     void deleteOrder(Long id);
     void deleteProductItem(Long id);
+    List<OrderResponseDto> ordersByCustomerId(String customerId);
+    double getTotal(Long orderId);
 }

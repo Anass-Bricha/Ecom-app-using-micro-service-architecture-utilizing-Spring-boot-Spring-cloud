@@ -95,4 +95,33 @@ public class OrderServicesImpl implements OrderServices {
     public void deleteProductItem(Long id){
         productItemRepo.deleteById(id);
     }
+
+
+    @Override
+    public List<OrderResponseDto> ordersByCustomerId(String customerId){
+        List<Order> ordersByCustomer = orderRepo.findByCustomerId(customerId);
+        Customer customer = customerRestClientService.customerById(customerId);
+        if(ordersByCustomer == null){
+            throw new OrderNotFoundException("Order not Found for this customer");
+        }
+
+        ordersByCustomer.forEach(o->{
+            o.setCustomer(customer);
+            o.getProductItems().forEach(pi->{
+                Product product = inventoryRestClientService.productById(pi.getProductId());
+                pi.setProduct(product);
+            });
+        });
+        return ordersByCustomer.stream().map(o->orderMapper.fromOrder(o)).collect(Collectors.toList());
+    }
+
+    @Override
+    public double getTotal(Long orderId) {
+        double total = 0;
+        Order order = orderRepo.findById(orderId).orElseThrow(()-> new OrderNotFoundException("Order not Found"));
+        for(ProductItem p: order.getProductItems()){
+            total += p.getPrice();
+        }
+        return total;
+    }
 }

@@ -1,0 +1,28 @@
+#server.port=9000
+#spring.application.name=GATEWAY-SERVICE
+#spring.cloud.gateway.globalcors.cors-configurations.'[/**]'.allowed-origins="http://localhost:4200"
+#spring.cloud.gateway.globalcors.cors-configurations.'[/**]'.allowed-headers=*
+#spring.cloud.gateway.globalcors.cors-configurations.'[/**]'.allowed-methods=get, post, put, delete
+#spring.config.import=optional:configserver:http://localhost:8888
+
+server:
+  port: 9000
+spring:
+  application:
+    name: GATEWAY-SERVICE
+
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "http://localhost:4200"
+            allowed-headers: "*"
+            allowed-methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+
+  config:
+    import: optional:configserver:http://localhost:8888

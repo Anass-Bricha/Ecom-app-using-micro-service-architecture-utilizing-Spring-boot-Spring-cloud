@@ -26,9 +26,14 @@ public class OrderRestController {
         return orderServices.save(orderRequestDto);
     }
 
-    @GetMapping(path = "/orders/{id}")
+    /*@GetMapping(path = "/orders/{id}")
     public OrderResponseDto orderById(@PathVariable Long id){
         return orderServices.getOrder(id);
+    }*/
+
+    @GetMapping(path = "/orders/{id}")
+    public List<OrderResponseDto> ordersByCustomerId(@PathVariable String id){
+        return orderServices.ordersByCustomerId(id);
     }
 
     @GetMapping(path = "/orders/{id}/productItems")
@@ -44,5 +49,11 @@ public class OrderRestController {
     @DeleteMapping(path = "/orders/productItems/{id}")
     public void deleteProductItem(@PathVariable Long id){
         orderServices.deleteProductItem(id);
+    }
+
+
+    @GetMapping(path = "/orders/{id}/total")
+    public double getTotal(@PathVariable Long id){
+        return orderServices.getTotal(id);
     }
 }
