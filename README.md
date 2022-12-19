@@ -25,3 +25,7 @@
 
 ## Security
 ### > Security Configuration :
+## NOTE : we added security to one service (Customer service) just for demonstration
+#### > Before we start configuring keycloak, we need first the dependencies : 
+![image](https://user-images.githubusercontent.com/79362593/208494329-51cda1a2-dbc8-4950-b022-a5386242442d.png)
+
