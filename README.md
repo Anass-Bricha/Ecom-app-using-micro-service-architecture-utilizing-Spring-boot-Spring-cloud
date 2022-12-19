@@ -33,17 +33,38 @@ We are using to secure our app keycloak adapter.
 * After launching, open keycloak on http://localhost:8080
 ![image](https://user-images.githubusercontent.com/79362593/208495822-88126d6c-9e33-4e85-8c69-f3e5f7730376.png)
 ![image](https://user-images.githubusercontent.com/79362593/208495974-8c48391a-1fe7-4d46-b01e-0eeb1911bf6e.png)
+* After creating the account, login to the keycloak
+![image](https://user-images.githubusercontent.com/79362593/208496174-31da8a4e-3bb0-454f-bef8-b5cad91e4169.png)
+
+#### > Realm Configuration
+![image](https://user-images.githubusercontent.com/79362593/208496511-bc02aa0f-0eeb-41d7-9c0c-7a8762d551ba.png)
+
+#### > Clients Configuration
+![image](https://user-images.githubusercontent.com/79362593/208496557-0c1770e0-6f96-4dcb-81ab-200560eda578.png)
+
+#### > Users Configuration
+![image](https://user-images.githubusercontent.com/79362593/208496592-da737601-6314-4255-86b1-525b6b21902f.png)
+
+#### > Users/Roles Mapping
+![image](https://user-images.githubusercontent.com/79362593/208496722-d0fe154b-dfb2-4d21-81a4-c51b74715ea1.png)
+![image](https://user-images.githubusercontent.com/79362593/208496637-76804ec8-618f-444a-8223-2eea1b548dbd.png)
+![image](https://user-images.githubusercontent.com/79362593/208496679-fba441eb-04d4-4ab4-bd20-8f03c9839bb0.png)
+
 
 
 #### > Before we start configuring keycloak on spring boot, we need first the dependencies : 
 ![image](https://user-images.githubusercontent.com/79362593/208494329-51cda1a2-dbc8-4950-b022-a5386242442d.png)
-* And we need to add keycloak adapter : 
+#### * And we need to add keycloak adapter : 
 ![image](https://user-images.githubusercontent.com/79362593/208494428-f0a8046a-2d0c-44c4-af24-1f1d506cc8ae.png)
 
-#### >Keycloak adapter configuration
+#### > Keycloak adapter configuration
 * Keycloak uses keycloakAuthenticationProvider that implements AuthenticationProvider
 ![image](https://user-images.githubusercontent.com/79362593/208494809-9f32a129-59ee-465a-abbb-d1eeb85bc591.png)
-### Keycloak uses a configuration file **keycloak.json** , and to use application properties to set keycloak configuration properties, we need to add the following Bean :
+* Keycloak uses a configuration file **keycloak.json** , and to use application properties to set keycloak configuration properties, we need to add the following Bean :
 ![image](https://user-images.githubusercontent.com/79362593/208495334-2db551a0-c227-4bf1-b748-621f6da9e77b.png)
+* Keycloak properties in application.yml
+![image](https://user-images.githubusercontent.com/79362593/208497186-41703b2e-8d0a-4c74-94cc-7423bca9d319.png)
+
+
 
 
