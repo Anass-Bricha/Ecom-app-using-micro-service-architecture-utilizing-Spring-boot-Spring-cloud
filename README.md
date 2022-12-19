@@ -24,8 +24,26 @@
 ![image](https://user-images.githubusercontent.com/79362593/208493792-38bd8e6a-3a6b-43b6-bbde-ac5c81889017.png)
 
 ## Security
-### > Security Configuration :
+We are using to secure our app keycloak adapter.
 ## NOTE : we added security to one service (Customer service) just for demonstration
-#### > Before we start configuring keycloak, we need first the dependencies : 
+
+### > Security Configuration :
+#### > Keycloak configuration : 
+* To launch keycloak locally, after downloading the zip file, you need to open the bin folder inside the keycloak folder, then launch the command above to start keycloak using **memory storage**.
+* After launching, open keycloak on http://localhost:8080
+![image](https://user-images.githubusercontent.com/79362593/208495822-88126d6c-9e33-4e85-8c69-f3e5f7730376.png)
+![image](https://user-images.githubusercontent.com/79362593/208495974-8c48391a-1fe7-4d46-b01e-0eeb1911bf6e.png)
+
+
+#### > Before we start configuring keycloak on spring boot, we need first the dependencies : 
 ![image](https://user-images.githubusercontent.com/79362593/208494329-51cda1a2-dbc8-4950-b022-a5386242442d.png)
+* And we need to add keycloak adapter : 
+![image](https://user-images.githubusercontent.com/79362593/208494428-f0a8046a-2d0c-44c4-af24-1f1d506cc8ae.png)
+
+#### >Keycloak adapter configuration
+* Keycloak uses keycloakAuthenticationProvider that implements AuthenticationProvider
+![image](https://user-images.githubusercontent.com/79362593/208494809-9f32a129-59ee-465a-abbb-d1eeb85bc591.png)
+### Keycloak uses a configuration file **keycloak.json** , and to use application properties to set keycloak configuration properties, we need to add the following Bean :
+![image](https://user-images.githubusercontent.com/79362593/208495334-2db551a0-c227-4bf1-b748-621f6da9e77b.png)
+
 
