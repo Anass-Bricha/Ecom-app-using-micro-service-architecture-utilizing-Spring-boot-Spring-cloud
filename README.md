@@ -60,10 +60,10 @@ We are using to secure our app keycloak adapter.
 #### > Keycloak adapter configuration
 * Keycloak uses keycloakAuthenticationProvider that implements AuthenticationProvider
 ![image](https://user-images.githubusercontent.com/79362593/208494809-9f32a129-59ee-465a-abbb-d1eeb85bc591.png)
-* Keycloak uses a configuration file **keycloak.json** , and to use application properties to set keycloak configuration properties, we need to add the following Bean :
-![image](https://user-images.githubusercontent.com/79362593/208495334-2db551a0-c227-4bf1-b748-621f6da9e77b.png)
-* Keycloak properties in application.yml
-![image](https://user-images.githubusercontent.com/79362593/208497186-41703b2e-8d0a-4c74-94cc-7423bca9d319.png)
+<p>&#x2022; Keycloak uses a configuration file <b>keycloak.json</b> , and to use application properties to set keycloak configuration properties,we need to add the following Bean:<p/>
+<img src="https://user-images.githubusercontent.com/79362593/208495334-2db551a0-c227-4bf1-b748-621f6da9e77b.png"></img>
+<p>&#x2022; Keycloak properties in application.yml</p>
+<img src="https://user-images.githubusercontent.com/79362593/208497186-41703b2e-8d0a-4c74-94cc-7423bca9d319.png"></img>
 
 
 
